@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landon Hotel Room Reservations</title>
+</head>
+<body>
+<h1>Welcome to the Reservations Page</h1>
+<table>
+    <thead>
+    <tr>
+        <td>Last Name</td>
+        <td>First Name</td>
+        <td>E-Mail</td>
+        <td>Phone Number</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="guest: ${guests}">
+        <td th:text="${guest.lastName}">Last Name</td>
+        <td th:text="${guest.firstName}">First Name</td>
+        <td th:text="${guest.emailAdress}">E-Mail</td>
+        <td th:text="${guest.phoneNumber}">Phone Number</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
